@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "build-client": "mkdir -p build && cd react-client && npm run build && cp -r ./dist/* ../build/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
   }
 }
